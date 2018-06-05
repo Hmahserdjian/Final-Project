@@ -1,0 +1,15 @@
+/* .footer {
+    min-height: 100px;
+    background: rgb(71, 255, 252);
+    position: relative;
+} */
+
+.footer span {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 3px;
+    background: tomato;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}

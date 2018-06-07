@@ -3,6 +3,7 @@ import Jumbotron from "../../Components/Jumbotron";
 import Footer from "../../Components/Footer";
 import { Container } from "../../Components/Grid";
 import Nav from "../../Components/Nav";
+import Card from "../../Components/Card"
 
 class App extends Component {
     render() {
@@ -15,7 +16,9 @@ class App extends Component {
         </Jumbotron>
 
         <Container>
-            
+            <Card  title="hello">
+                
+            </Card>
 
    
 

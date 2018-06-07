@@ -19,7 +19,11 @@
     "nodemon": "^1.11.0"
   },
   "dependencies": {
+    "body-parser": "^1.18.3",
     "express": "^4.15.4",
+    "install": "^0.11.0",
+    "mongoose": "^5.1.4",
+    "passport": "^0.4.0",
     "react-foundation": "^0.9.5",
     "react-router-dom": "^4.2.2"
   }

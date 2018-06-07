@@ -9,31 +9,47 @@ class App extends Component {
         return (
             <div>
                 <Nav/>
-                <Jumbotron/>
+                <Jumbotron>
+                    <h6> its all in your head</h6>
+                    hello
+                </Jumbotron>
                 <Footer/>
                 <Container>
 
-
+ {/* <form>
+  <div class="form-group">
+    <label for="Username">Username:</label>
+    <div>
+        <input type="text" placeholder="Username" required></input>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password:</label>
+        <div>
+            <input type="password"  placeholder="Password" required></input>
+        </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form> */}
                        <Row>
                             < Col size = "md-6" >
                                 <label>Name
-                                    <input type="text" name="name"/>
+                                    <input type="text" name="name" required/>
                                     <div class="error_txt inactive" id="error_name">Please provide your name.</div>
                                 </label>
                             </Col>
 
                             <Col size="md-6">
                                 <label>Email
-                                    <input type="text" name="email"/>
+                                    <input type="text" name="email" required/>
                                     <div class="error_txt inactive" id="error_email">Please provide your email.</div>
                                 </label>
                             </Col>
-                        </Row>
-                        <Row>
                             
-                                <button type="button" align="center" class="btn btn-primary">Submit</button>
-                            
+                                <button type="button"  class="btn btn-warning">Submit</button>
+                          
                         </Row>
+                    
                            </Container>
                   
             </div>

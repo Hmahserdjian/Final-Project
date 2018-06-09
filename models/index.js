@@ -1,3 +1,3 @@
 module.exports = {
-  Research: require("./research")
+  Researcher: require("./research")
 };

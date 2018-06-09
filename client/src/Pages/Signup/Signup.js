@@ -10,8 +10,7 @@ class App extends Component {
             <div>
                 <Nav/>
                 <Jumbotron>
-                    <h6> its all in your head</h6>
-                    hello
+                    <h1>Sign-up</h1>
                 </Jumbotron>
                 <Footer/>
                 <Container>
@@ -38,14 +37,24 @@ class App extends Component {
                                     <div class="error_txt inactive" id="error_name">Please provide your name.</div>
                                 </label>
                             </Col>
-
                             <Col size="md-6">
                                 <label>Email
                                     <input type="text" name="email" required/>
                                     <div class="error_txt inactive" id="error_email">Please provide your email.</div>
                                 </label>
                             </Col>
-                            
+                                      <Col size="md-6">
+                                <label>Username
+                                    <input type="text" name="username" required/>
+                                    <div class="error_txt inactive" id="error_username">Please provide your username.</div>
+                                </label>
+                            </Col>
+                                      <Col size="md-6">
+                                <label>Password
+                                    <input type="text" name="Password" required/>
+                                    <div class="error_txt inactive" id="error_password">Please provide your password.</div>
+                                </label>
+                            </Col>
                                 <button type="button"  class="btn btn-warning">Submit</button>
                           
                         </Row>

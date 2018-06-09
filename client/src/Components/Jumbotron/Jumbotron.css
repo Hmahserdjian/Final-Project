@@ -1,8 +1,15 @@
 .jumbotron {
-    min-height: 10px;
+    /* min-height: 10px;
     position: relative;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: aqua;
+    color: gray;
     top: -10px;
-
+    font-weight: 500;
+    color: olivedrab; */
+        position: relative;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    top: -10px;
+    font-weight: 500;
+    background: red; /* For browsers that do not support gradients */
+    background: linear-gradient(red, blue, orange); /* Standard syntax (must be last) */
 }

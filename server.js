@@ -4,33 +4,54 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const bodyParser = require("body-parser");
+// const routes = require("./routes");
+const passport = require('passport');
+// const bcrypt = require('bcrypt');
 
-// for body parser for Ajax requests
-app.use(body.Parser.urlcoded({extend: true }));
+
+// Configure body parser for AJAX requests
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 app.use(bodyParser.json());
-// Serve up static assets (usually on heroku)
+// Serve up static assets
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
-// app routes
-app.use(routes);
 
-// setsmup promises with mongoose
+// Add routes, both API and view
+// app.use(routes);
+
+// Set up promises with mongoose
 mongoose.Promise = global.Promise;
-
-//connect to mongo DB
+// Connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/researcher",
-  {
-    useMongoClient: true
+  process.env.MONGODB_URI || "mongodb://localhost/researcher", {
+    // useMongoClient: true
   }
 );
-// Send every request to the React app
-// Define any API routes before this runs
-app.get("*", function(req, res) {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
 
-app.listen(PORT, function() {
-  console.log(`🌎 ==> Server now on port ${PORT}!`);
-});
+// Start the API server
+app.listen(PORT, () =>
+  console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`)
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

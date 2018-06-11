@@ -3,9 +3,34 @@ import Jumbotron from "../../Components/Jumbotron";
 import Footer from "../../Components/Footer";
 import { Container } from "../../Components/Grid";
 import Nav from "../../Components/Nav";
-import Card from "../../Components/Card"
+import Card from "../../Components/Card";
+import List from "../../Components/List";
+import API from "../../routes/api"
 
 class Profile extends Component {
+    state = {
+        researcher: []
+    };
+
+    componentDidMount() {
+        this.researcher();
+    }
+
+    researcher = () => {
+        API.research()
+            .then(res =>
+                this.setState({
+                    researcher: res.data
+                })
+            )
+            .catch(err => console.log(err));
+    };
+
+    researcher= id => {
+        API.research(id).then(res => this.researcher());
+    }
+    
+
     render() {
         return (
             <div>
@@ -16,8 +41,21 @@ class Profile extends Component {
         </Jumbotron>
 
         <Container>
-            <Card>
-                
+            <Card title="research" icon="download">
+              {this.state.researcher.length ? (
+                <List>
+                  {this.state.researcher.map(researcher => (
+                    <researcher
+                      _id={researcher._id}
+                      cardTilte={researcher.title}
+                      cardBody= {researcher.body}
+                      date= {researcher.date}  
+                    />
+                  ))}
+                </List>
+              ) : (
+                <h2 className="text-center">No research submitted.</h2>
+              )}
             </Card>
 
    

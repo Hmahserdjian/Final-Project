@@ -6,14 +6,14 @@ const apiRoutes = require("./api");
 
 
 routes.get('/', function (req, res, next) {
-    Research.find(function (err, id) {
+    researcher.find(function (err, id) {
         if (err) return next(err);
         res.json(id);
     });
 });
 
 routes.post('/', function (req, res, next) {
-    Researcher.create(req.body, function (err, post) {
+    researcher.create(req.body, function (err, post) {
         if (err) return next(err);
         res.json(post);
     });

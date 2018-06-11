@@ -4,7 +4,7 @@ import Footer from "../../Components/Footer";
 import { Container, Row, Col } from "../../Components/Grid";
 import Nav from "../../Components/Nav";
 
-class App extends Component {
+class Signup extends Component {
     render() {
         return (
             <div>
@@ -30,6 +30,7 @@ class App extends Component {
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form> */}
+            <form>
                        <Row>
                             < Col size = "md-6" >
                                 <label>Name
@@ -46,20 +47,21 @@ class App extends Component {
                                       <Col size="md-6">
                                 <label>Username
                                     <input type="text" name="username" required/>
-                                    <div class="error_txt inactive" id="error_username">Please provide your username.</div>
+                                    <div class="error_txt inactive" id="error_username" >Please provide your username.</div>
                                 </label>
                             </Col>
                                       <Col size="md-6">
                                 <label>Password
-                                    <input type="text" name="Password" required/>
+                                    <input type="password" placeholder="Password" required/>
                                     <div class="error_txt inactive" id="error_password">Please provide your password.</div>
                                 </label>
                             </Col>
                                 <button type="button"  class="btn btn-warning">Submit</button>
                           
                         </Row>
-                    
+                </form>    
                            </Container>
+                
                   
             </div>
                
@@ -67,7 +69,7 @@ class App extends Component {
     }
 };
 
-export default App;
+export default Signup;
 
 
 

@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt');
 var Schema = mongoose.Schema;
 
 
-var UserSchema = new Schema({
+var researcher = new Schema({
 name: {
     type: String,
     default: "0"
@@ -22,15 +22,15 @@ password: {
     default: ""
 }
 });
-UserSchema.methods.generateHas = function (password) {
+researcher.methods.generateHas = function (password) {
      return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null )
 
 };
 
-UserSchema.methods.validatePassword = function(password){
+researcher.methods.validatePassword = function(password){
     return bcrypt.hashsync(password, this.password);
 }
-var User = mongoose.model("User", UserSchema);
+var User = mongoose.model("User", researcher);
 
 // Export the User model
-module.exports = User;
+module.exports = researcher;

@@ -5,7 +5,7 @@ import { Container } from "../../Components/Grid";
 import Nav from "../../Components/Nav";
 import Card from "../../Components/Card"
 
-class App extends Component {
+class Profile extends Component {
     render() {
         return (
             <div>
@@ -65,4 +65,4 @@ class App extends Component {
 //     );
 //   }
 // }
-export default App;
+export default Profile;

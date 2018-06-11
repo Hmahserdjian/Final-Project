@@ -9,8 +9,8 @@
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 3px;
-    color: gray;
+    padding: 10px;
+    background-color: blue;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: olivedrab;
 }

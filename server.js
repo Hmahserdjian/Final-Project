@@ -27,7 +27,7 @@ if (process.env.NODE_ENV === "production") {
 mongoose.Promise = global.Promise;
 // Connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/researcher", {
+  process.env.MONGODB_URI || "mongodb://localhost/Researcher", {
     // useMongoClient: true
   }
 );

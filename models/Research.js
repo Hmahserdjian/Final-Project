@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 
-var Researcher = new Schema({
+var researcherSchema = new Schema({
     _id: {type:Schema.Types.ObjectId, require: true },
     username: {type: String, required: true},
     password: {type: String, required: true},
@@ -13,6 +13,6 @@ var Researcher = new Schema({
     
 }, {_id:false});
 
-var Researcher = mongoose.model("research", Researcher);
+var researcher = mongoose.model("researcher", researcherSchema);
 
-// model.exports = Researcher;
+model.exports = research;

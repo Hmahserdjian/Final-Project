@@ -11,6 +11,7 @@ router
 router
     .route("/Profile")
     .get(researchController.findAll);
+    
 router
     .route("/Signin")
     .get(researchController.findAll);

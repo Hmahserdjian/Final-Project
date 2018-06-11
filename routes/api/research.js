@@ -17,6 +17,21 @@ routes.post('/', function (req, res, next) {
         if (err) return next(err);
         res.json(post);
     });
+}),
+
+routes.get('/Profile', function (req, res, next) {
+    researcher.find(function (err, id) {
+        if (err) return next(err);
+        res.json(id);
+    });
 });
+
+routes.post('/Profile', function (req, res, next) {
+    researcher.create(req.body, function (err, post) {
+        if (err) return next(err);
+        res.json(post);
+    });
+});
+
 
 module.exports = routes;

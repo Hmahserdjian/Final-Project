@@ -17,7 +17,7 @@ routes.post('/', function (req, res, next) {
         if (err) return next(err);
         res.json(post);
     });
-}),
+});
 
 routes.get('/Profile', function (req, res, next) {
     researcher.find(function (err, id) {

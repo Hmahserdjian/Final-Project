@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
-var researchController = require('../../Controller/Research.js');
+var researchController = require('../../Controller/research.js');
 var apiRoutes = require("./api");
 
 router
@@ -11,7 +11,7 @@ router
 router
     .route("/Profile")
     .get(researchController.findAll);
-    
+
 router
     .route("/Signin")
     .get(researchController.findAll);

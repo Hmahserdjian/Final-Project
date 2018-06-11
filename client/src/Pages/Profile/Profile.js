@@ -16,7 +16,7 @@ class Profile extends Component {
         </Jumbotron>
 
         <Container>
-            <Card  title="hello">
+            <Card>
                 
             </Card>
 

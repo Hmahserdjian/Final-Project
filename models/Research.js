@@ -15,4 +15,4 @@ var researcherSchema = new Schema({
 
 var researcher = mongoose.model("researcher", researcherSchema);
 
-model.exports = research;
+model.exports = Research;

@@ -17,7 +17,7 @@ class Profile extends Component {
     // }
 
     // researcher = () => {
-    //     API.research()
+    //     List.research()
     //         .then(res =>
     //             this.setState({
     //                 researcher: res.data
@@ -27,7 +27,7 @@ class Profile extends Component {
     // };
 
     // researcher= id => {
-    //     API.research(id).then(res => this.researcher());
+    //     List.research(id).then(res => this.researcher());
     // }
     
 
@@ -39,9 +39,26 @@ class Profile extends Component {
         <Jumbotron>
             <h1><strong>Your profile</strong></h1>
         </Jumbotron>
+<Container>
+  
 
+<Card title="New Research">
+    <label for="title">Research title</label>
+    <input type="text"/>
+
+
+    <label for="research">My research</label>
+    <textarea  name="subject" placeholder="Write something.." ></textarea>
+
+    
+    <button type="button" class="btn btn-large btn-info">submit</button>
+       
+        
+</Card>
+
+</Container>
         <Container>
-            <Card title="research" icon="download">
+            <Card title="Research">
               {this.state.researcher.length ? (
                 <List>
                   {this.state.researcher.map(researcher => (
@@ -49,7 +66,9 @@ class Profile extends Component {
                       _id={researcher._id}
                       cardTilte={researcher.title}
                       cardBody= {researcher.body}
-                      date= {researcher.date}  
+                      date= {researcher.date} 
+                      handleClick={this.handleResearchPost}
+                      saved 
                     />
                   ))}
                 </List>
@@ -57,14 +76,9 @@ class Profile extends Component {
                 <h2 className="text-center">No research submitted.</h2>
               )}
             </Card>
-
-   
-
+            <button type="submit" class="btn btn-primary">Submit</button>
         </Container>   
-
-
-       
-            <Footer/>
+      <Footer/>
     </div>
 
       )

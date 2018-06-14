@@ -15,22 +15,42 @@ class Signup extends Component {
                 <Footer/>
                 <Container>
 
- {/* <form>
-  <div class="form-group">
-    <label for="Username">Username:</label>
-    <div>
-        <input type="text" placeholder="Username" required></input>
-    </div>
-  </div>
-  <div class="form-group">
+ <form>
+<Row>
+                            < Col size = "md-6" >
+                                <label>Name
+                                    <input type="text" name="name" required/>
+                                    <div class="error_txt inactive" id="error_name">Please provide your name.</div>
+                                </label>
+                            </Col>
+                                  <Col size="md-6">
+                                <label>Email
+                                    <input type="text" name="email" required/>
+                                    <div class="error_txt inactive" id="error_email">Please provide your email.</div>
+                                </label>
+                            </Col>
+                                      <Col size="md-6">
+                                <label>Username
+                                    <input type="text" name="username" required/>
+                                    <div class="error_txt inactive" id="error_username" >Please provide your username.</div>
+                                </label>
+                            </Col>
+                                      <Col size="md-6">
+                                <label>Password
+                                    <input type="password"  required/>
+                                    <div class="error_txt inactive" id="error_password" >Please provide your Password.</div>
+                                </label>
+                            </Col>
+</Row>
+  {/* <div class="form-group">
     <label for="exampleInputPassword1">Password:</label>
         <div>
             <input type="password"  placeholder="Password" required></input>
         </div>
-  </div>
+  </div> */}
   <button type="submit" class="btn btn-primary">Submit</button>
-</form> */}
-            <form>
+</form>
+            {/* <form>
                        <Row>
                             < Col size = "md-6" >
                                 <label>Name
@@ -51,15 +71,14 @@ class Signup extends Component {
                                 </label>
                             </Col>
                                       <Col size="md-6">
-                                <label>Password
-                                    <input type="password" placeholder="Password" required/>
-                                    <div class="error_txt inactive" id="error_password">Please provide your password.</div>
+                                <label>
+                                    <input type="password"  required/>
                                 </label>
                             </Col>
                                 <button type="button"  class="btn btn-warning">Submit</button>
                           
-                        </Row>
-                </form>    
+                        </Row> */}
+                {/* </form>     */}
                            </Container>
                 
                   
